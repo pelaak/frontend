@@ -27,7 +27,7 @@
     border: 2px solid #ccc; /* کادر برای کارت‌ها */
     border-radius: 20px; /* گوشه‌های گرد */
     overflow: hidden; /* برای جلوگیری از خروج تصویر از کادر */
-    height: 300px; /* ارتفاع ثابت برای کارت‌ها */
+    height: 100px; /* ارتفاع ثابت برای کارت‌ها */
 }
 
 .oval-card {
@@ -39,8 +39,8 @@
 
 .oval-image {
     border-radius: 50%; /* بیضی کردن تصویر */
-    width: 100px; /* عرض تصویر */
-    height: 300px; /* ارتفاع تصویر */
+    width: 50px; /* عرض تصویر */
+    height: 150px; /* ارتفاع تصویر */
     object-fit: cover; /* برای حفظ نسبت تصویر */
     margin-top: 10px; /* فاصله بالای تصویر */
 }

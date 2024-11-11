@@ -47,11 +47,12 @@ function Home() {
             <div className="card-container p-4 rounded">
                 <div className="row">
                     {people.map((person, index) => (
-                        <div className="col-md-3 mb-4" key={index}>
+                        <div className="col-6 mb-4" key={index}>
                             <div className="card text-center bg-light text-dark card-hover oval-card p-1">
                                 <img src={person.image} alt={person.name} className="card-img-top oval-image m-0" />
                                 <div className="card-body">
-                                    <h5 className="card-title"><span style={{color: "red"}}>شهید</span> {person.name}</h5>
+                                    <div><span style={{color: "red", fontSize: "10px"}}>شهید والامقام</span></div>
+                                    <h7 className="card-title">{person.name}</h7>
                                 </div>
                             </div>
                         </div>
