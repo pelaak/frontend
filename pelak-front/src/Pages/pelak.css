@@ -1,0 +1,83 @@
+.martyr-details-container {
+    background-color: #222; /* رنگ پس‌زمینه تیره مشابه سایر صفحات */
+    color: #fff; /* رنگ متن سفید برای خوانایی بهتر */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.main-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px; /* گوشه‌های کمتر گرد مشابه کارت‌ها */
+    margin-bottom: 20px;
+    border: 2px solid #444; /* حاشیه برای هماهنگی با قالب */
+}
+
+.personal-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.will-section, .memories-section {
+    background-color: #333; /* رنگ پس‌زمینه ملایم تیره */
+    color: #ddd; /* رنگ متن کمی روشن‌تر */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* سایه برای برجسته کردن */
+    margin-bottom: 20px;
+    max-height: 200px; /* ارتفاع حداکثر */
+    overflow-y: auto; /* افزودن اسکرول در صورت بیشتر بودن محتوا */
+}
+
+.photo-gallery {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #222; /* مشابه پس‌زمینه صفحه */
+    border-radius: 8px;
+}
+
+.photo-scroller {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px; /* گوشه‌های گرد مشابه عکس‌های کارت */
+    transition: transform 0.2s;
+    border: 2px solid #444; /* حاشیه هماهنگ */
+}
+
+.gallery-photo:hover {
+    transform: scale(1.05);
+}
+
+.full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* پس‌زمینه تیره برای تمام صفحه */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.full-screen-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    border: 2px solid #555; /* حاشیه برای ظاهر هماهنگ */
+}
+
+.fields {
+    margin-top: 50px;
+}
