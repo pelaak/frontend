@@ -5,42 +5,46 @@
 }
 
 .logo-container {
-    border: 2px solid white; /* کادر سفید */
-    border-radius: 5px; /* گوشه‌های گرد */
-    padding: 5px; /* فاصله داخلی */
-    display: inline-block; /* برای قرار دادن در کنار هم */
-}
-
-.card-container {
-    overflow-y: auto; 
+  border: 2px solid white; /* کادر سفید */
+  border-radius: 5px; /* گوشه‌های گرد */
+  padding: 5px; /* فاصله داخلی */
+  display: inline-block; /* برای قرار دادن در کنار هم */
 }
 
 .card-hover {
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 
 .card-hover:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .card {
-    border: 2px solid #ccc; /* کادر برای کارت‌ها */
-    border-radius: 20px; /* گوشه‌های گرد */
-    overflow: hidden; /* برای جلوگیری از خروج تصویر از کادر */
-    height: 100px; /* ارتفاع ثابت برای کارت‌ها */
+  border: 2px solid #ccc; /* کادر برای کارت‌ها */
+  border-radius: 20px; /* گوشه‌های گرد */
+  overflow: hidden; /* برای جلوگیری از خروج تصویر از کادر */
+  height: 300px; /* ارتفاع ثابت برای کارت‌ها */
+  justify-self: center;
+  width: 80%;
 }
 
 .oval-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .oval-image {
-    border-radius: 50%; /* بیضی کردن تصویر */
-    width: 50px; /* عرض تصویر */
-    height: 150px; /* ارتفاع تصویر */
-    object-fit: cover; /* برای حفظ نسبت تصویر */
-    margin-top: 10px; /* فاصله بالای تصویر */
+  border-radius: 50%; /* بیضی کردن تصویر */
+  width: 100px; /* عرض تصویر */
+  height: 100px; /* ارتفاع تصویر */
+  object-fit: cover; /* برای حفظ نسبت تصویر */
+  margin-top: 10px; /* فاصله بالای تصویر */
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 50%;
+  }
 }
