@@ -1,9 +1,11 @@
+.container {
+    background: url('https://shohada.org/themes/apestrap/css/img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
 .martyr-details-container {
-    background-color: #222; /* رنگ پس‌زمینه تیره مشابه سایر صفحات */
-    color: #fff; /* رنگ متن سفید برای خوانایی بهتر */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    /*padding: 20px;*/
 }
 
 .main-image {
@@ -15,14 +17,14 @@
     border: 2px solid #444; /* حاشیه برای هماهنگی با قالب */
 }
 
-.personal-info p {
+.personal-info {
+    text-align: center;
     font-size: 16px;
     line-height: 1.6;
+    color: #444;
 }
 
 .will-section, .memories-section {
-    background-color: #333; /* رنگ پس‌زمینه ملایم تیره */
-    color: #ddd; /* رنگ متن کمی روشن‌تر */
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* سایه برای برجسته کردن */
@@ -51,7 +53,7 @@
     cursor: pointer;
     border-radius: 8px; /* گوشه‌های گرد مشابه عکس‌های کارت */
     transition: transform 0.2s;
-    border: 2px solid #444; /* حاشیه هماهنگ */
+    border: 2px solid #ffffff; /* حاشیه هماهنگ */
 }
 
 .gallery-photo:hover {
@@ -80,4 +82,14 @@
 
 .fields {
     margin-top: 50px;
+}
+
+.personal-info p {
+    display: inline-block;
+    border: 1px solid #ccc; /* اضافه کردن حاشیه */
+    padding: 10px; /* فضای داخلی */
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+    margin: 10px; /* فاصله بین عناصر */
+    background-color: #f9f9f9; /* رنگ پس‌زمینه */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه */
 }

@@ -21,11 +21,12 @@
 
 .card {
   border: 2px solid #ccc; /* کادر برای کارت‌ها */
-  border-radius: 20px; /* گوشه‌های گرد */
+  border-radius: 80px; /* گوشه‌های گرد */
   overflow: hidden; /* برای جلوگیری از خروج تصویر از کادر */
   height: 300px; /* ارتفاع ثابت برای کارت‌ها */
   justify-self: center;
   width: 80%;
+  box-shadow: 0 0 20px #000000;
 }
 
 .oval-card {
