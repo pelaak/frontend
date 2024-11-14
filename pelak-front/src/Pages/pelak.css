@@ -1,7 +1,31 @@
 .container {
-    background: url('https://shohada.org/themes/apestrap/css/img/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
+    padding: 50px;
+}
+
+.pelak-header {
+    display: block;
+    align-items: center;
+    padding: 10px;
+}
+
+.pelak-top {
+    text-align: center;
+}
+
+.old-fields {
+    border: black solid 1px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.personal-info p {
+    display: inline-block;
+    border: 1px solid #ccc; /* اضافه کردن حاشیه */
+    padding: 10px; /* فضای داخلی */
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+    margin: 10px; /* فاصله بین عناصر */
+    background-color: #f9f9f9; /* رنگ پس‌زمینه */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه */
 }
 
 .martyr-details-container {
@@ -10,10 +34,9 @@
 
 .main-image {
     width: 200px;
-    height: 200px;
+    height: 240px;
     object-fit: cover;
     border-radius: 10px; /* گوشه‌های کمتر گرد مشابه کارت‌ها */
-    margin-bottom: 20px;
     border: 2px solid #444; /* حاشیه برای هماهنگی با قالب */
 }
 
@@ -29,15 +52,16 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* سایه برای برجسته کردن */
     margin-bottom: 20px;
-    max-height: 200px; /* ارتفاع حداکثر */
+    max-height: 400px; /* ارتفاع حداکثر */
     overflow-y: auto; /* افزودن اسکرول در صورت بیشتر بودن محتوا */
+    background: #f9f9f9;
+    opacity: 80%;
 }
 
 .photo-gallery {
     overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
-    background-color: #222; /* مشابه پس‌زمینه صفحه */
     border-radius: 8px;
 }
 
@@ -47,13 +71,13 @@
 }
 
 .gallery-photo {
-    width: 120px;
-    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
     object-fit: cover;
     cursor: pointer;
     border-radius: 8px; /* گوشه‌های گرد مشابه عکس‌های کارت */
     transition: transform 0.2s;
-    border: 2px solid #ffffff; /* حاشیه هماهنگ */
+    border: 2px solid #000000; /* حاشیه هماهنگ */
 }
 
 .gallery-photo:hover {
@@ -82,14 +106,4 @@
 
 .fields {
     margin-top: 50px;
-}
-
-.personal-info p {
-    display: inline-block;
-    border: 1px solid #ccc; /* اضافه کردن حاشیه */
-    padding: 10px; /* فضای داخلی */
-    border-radius: 5px; /* گرد کردن گوشه‌ها */
-    margin: 10px; /* فاصله بین عناصر */
-    background-color: #f9f9f9; /* رنگ پس‌زمینه */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه */
 }

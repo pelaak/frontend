@@ -30,30 +30,28 @@ function Home() {
         <div className="bg-night">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                        <div className="logo-container">
-                            <img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuceGnKmmyF0V_77yQnFzgBLeB9kAsOO1p5E_AlYJGdpcdd7WOt2-K6hjG-LvyehqkhyA&usqp=CAU"
-                                alt="لوگو چپ" style={{width: '70px', borderRadius: "5px"}}/>
-                        </div>
-                    </a>
+                    <div className="logo-container">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1iXJSICqCgserhWeGFVhh2Ec085BQZBXLiNsbekoXgGxudjPJ"
+                            alt="لوگو چپ"
+                            style={{width: '45px', borderRadius: "5px"}}/>
+                    </div>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
                                 <a className="nav-link" href="#">خانه</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">ارتباط با ما</a>
+                                <a className="nav-link" href="http://ble.ir/hosseyyn">ارتباط با ما</a>
                             </li>
                         </ul>
                     </div>
-                    <a className="navbar-brand" href="#">
-                        <div className="logo-container">
-                            <img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1iXJSICqCgserhWeGFVhh2Ec085BQZBXLiNsbekoXgGxudjPJ"
-                                alt="لوگو راست" style={{width: '70px', borderRadius: "5px"}}/>
-                        </div>
-                    </a>
+                    <div className="logo-container">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuceGnKmmyF0V_77yQnFzgBLeB9kAsOO1p5E_AlYJGdpcdd7WOt2-K6hjG-LvyehqkhyA&usqp=CAU"
+                            alt="لوگو راست"
+                            style={{width: '45px', borderRadius: "5px"}}/>
+                    </div>
                 </div>
             </nav>
 
@@ -79,7 +77,14 @@ function Home() {
                 </div>
             </div>
             <footer className="text-center text-white py-3">
-                <p>تمامی حقوق محفوظ است © 2024</p>
+                <p className="bg-dark">تقدیم به ساحت مقدس شهدا و امام شهدا</p>
+                <p className="mb-1">تمامی حقوق محفوظ است © 2024</p>
+                <a href="http://ble.ir/hosseyyn">
+                    <img
+                        src="https://bale.ai/_next/static/media/bale_footer.8b07abbc.svg"
+                        alt="link bale"
+                    />
+                </a>
             </footer>
         </div>
     );

@@ -1,5 +1,5 @@
 .bg-night {
-    background: url('https://shohada.org/themes/apestrap/css/img/bg.jpg') no-repeat center center fixed;
+    background: url('../media/bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
 }
@@ -21,7 +21,7 @@
 
 .card {
   border: 2px solid #ccc; /* کادر برای کارت‌ها */
-  border-radius: 80px; /* گوشه‌های گرد */
+  border-radius: 80%; /* گوشه‌های گرد */
   overflow: hidden; /* برای جلوگیری از خروج تصویر از کادر */
   height: 300px; /* ارتفاع ثابت برای کارت‌ها */
   justify-self: center;

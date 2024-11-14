@@ -15,7 +15,7 @@ var b = `علاوه بر فشار متقابل، بازی با خط دفاعی �
 function Pelak() {
     const {id} = useParams()
 
-    const [activeKey, setActiveKey] = useState('tab1');
+    const [activeKey, setActiveKey] = useState('will');
 
     const person = {
         id: 1,
@@ -29,7 +29,7 @@ function Pelak() {
     }
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const photos = ['https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', // مسیر عکس‌های بیشتر
+    const photos = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuceGnKmmyF0V_77yQnFzgBLeB9kAsOO1p5E_AlYJGdpcdd7WOt2-K6hjG-LvyehqkhyA&usqp=CAU", 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', 'https://shafighefakeh.ir/gallery/var/resizes/1403139185/6104023.jpg?m=1723436919', // مسیر عکس‌های بیشتر
     ];
 
     const showFullScreen = (image) => {
@@ -40,63 +40,68 @@ function Pelak() {
         setSelectedImage(null);
     };
 
-    return (
-        <div className="container martyr-details-container">
-            <header className="text-center py-3">
-                <h1>{person.name}</h1>
-                <img src={person.image} alt={person.name} className="main-image mt-2"/>
-            </header>
-
-            <div className="personal-info my-3">
-                <p><strong>نام پدر:</strong> {person.fatherName}</p>
-                <p><strong>تاریخ تولد:</strong> {person.birthDate}</p>
-                <p><strong>تاریخ شهادت:</strong> {person.martyrdomDate}</p>
-                <p><strong>محل شهادت:</strong> {person.fatherName}</p>
-                <p><strong>عملیات:</strong> {person.fatherName}</p>
-                <p><strong>تحصیلات:</strong> {person.fatherName}</p>
-                <p><strong>شغل:</strong> {person.fatherName}</p>
+    return (<div className="container bg-night">
+        <div className="pelak-header">
+            <div className="pelak-top my-3 gap-3">
+                <img src={person.image} alt={person.name} className="main-image mb-3"/>
+                <div className="old-block">
+                    <h1>{person.name}</h1>
+                    <p>فرزند {person.fatherName}</p>
+                    <p className="old-fields bg-success bg-opacity-50"><strong>تاریخ
+                        تولد:</strong> {person.birthDate}
+                    </p>
+                    <p className="old-fields bg-danger bg-opacity-50"><strong>تاریخ
+                        شهادت:</strong> {person.martyrdomDate}</p>
+                </div>
             </div>
 
-            <Tabs
-                defaultActiveKey="profile"
-                id="justify-tab-example"
-                className="mb-3"
-                activeKey={activeKey}
-                onSelect={(k) => setActiveKey(k)}
-                justify
-            >
-                <Tab eventKey="will" title="وصیت‌نامه">
-                    <div className="will-section my-3">
-                        <p>{person.will}</p>
-                    </div>
-                </Tab>
-                <Tab eventKey="picturse" title="تصاویر">
-                    <div className="photo-gallery my-3">
-                        <div className="photo-scroller">
-                            {photos.map((photo, index) => (<img
-                                key={index}
-                                src={photo}
-                                alt={`photo-${index}`}
-                                className="gallery-photo"
-                                onClick={() => showFullScreen(photo)}
-                            />))}
-                        </div>
-                    </div>
-                    {selectedImage && (<div className="full-screen-overlay" onClick={closeFullScreen}>
-                        <img src={selectedImage} alt="Full Screen" className="full-screen-image"/>
-                    </div>)}
-                </Tab>
-                <Tab eventKey="memorise" title="خاطرات">
-                    <div className="memories-section my-3">
+            <div className="pelak-btn personal-info my-3">
+                <p><strong>محل شهادت:</strong> {person.fatherName}</p>
+                <p><strong>عملیات:</strong> {person.fatherName}</p>
+                <p><strong>شغل:</strong> {person.fatherName}</p>
+            </div>
+        </div>
 
-                        <ul>
-                            {person.memories.map((memory, index) => (<li key={index}>{memory}</li>))}
-                        </ul>
-                    </div>
-                </Tab>
-            </Tabs>
 
-        </div>);
+        <Tabs
+            defaultActiveKey="profile"
+            id="justify-tab-example"
+            className="mt-1"
+            activeKey={activeKey}
+            onSelect={(k) => setActiveKey(k)}
+            justify
+        >
+            <Tab eventKey="will" title="وصیت‌نامه">
+                <div className="will-section my-3">
+                    <p>{person.will}</p>
+                </div>
+            </Tab>
+            <Tab eventKey="picturse" title="تصاویر">
+                <div className="photo-gallery my-3">
+                    <div className="photo-scroller">
+                        {photos.map((photo, index) => (<img
+                            key={index}
+                            src={photo}
+                            alt={`photo-${index}`}
+                            className="gallery-photo"
+                            onClick={() => showFullScreen(photo)}
+                        />))}
+                    </div>
+                </div>
+                {selectedImage && (<div className="full-screen-overlay" onClick={closeFullScreen}>
+                    <img src={selectedImage} alt="Full Screen" className="full-screen-image"/>
+                </div>)}
+            </Tab>
+            <Tab eventKey="memorise" title="خاطرات">
+                <div className="memories-section my-3">
+                    <ul>
+                        {person.memories.map((memory, index) => (<li key={index}>{memory}</li>))}
+                    </ul>
+                </div>
+            </Tab>
+        </Tabs>
+
+    </div>);
 }
 
 export default Pelak;
