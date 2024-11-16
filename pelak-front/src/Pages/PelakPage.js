@@ -40,68 +40,100 @@ function Pelak() {
         setSelectedImage(null);
     };
 
-    return (<div className="container bg-night">
-        <div className="pelak-header">
-            <div className="pelak-top my-3 gap-3">
-                <img src={person.image} alt={person.name} className="main-image mb-3"/>
-                <div className="old-block">
-                    <h1>{person.name}</h1>
-                    <p>فرزند {person.fatherName}</p>
-                    <p className="old-fields bg-success bg-opacity-50"><strong>تاریخ
-                        تولد:</strong> {person.birthDate}
-                    </p>
-                    <p className="old-fields bg-danger bg-opacity-50"><strong>تاریخ
-                        شهادت:</strong> {person.martyrdomDate}</p>
-                </div>
-            </div>
-
-            <div className="pelak-btn personal-info my-3">
-                <p><strong>محل شهادت:</strong> {person.fatherName}</p>
-                <p><strong>عملیات:</strong> {person.fatherName}</p>
-                <p><strong>شغل:</strong> {person.fatherName}</p>
-            </div>
-        </div>
-
-
-        <Tabs
-            defaultActiveKey="profile"
-            id="justify-tab-example"
-            className="mt-1"
-            activeKey={activeKey}
-            onSelect={(k) => setActiveKey(k)}
-            justify
-        >
-            <Tab eventKey="will" title="وصیت‌نامه">
-                <div className="will-section my-3">
-                    <p>{person.will}</p>
-                </div>
-            </Tab>
-            <Tab eventKey="picturse" title="تصاویر">
-                <div className="photo-gallery my-3">
-                    <div className="photo-scroller">
-                        {photos.map((photo, index) => (<img
-                            key={index}
-                            src={photo}
-                            alt={`photo-${index}`}
-                            className="gallery-photo"
-                            onClick={() => showFullScreen(photo)}
-                        />))}
+    return (
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <div className="logo-container">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1iXJSICqCgserhWeGFVhh2Ec085BQZBXLiNsbekoXgGxudjPJ"
+                            alt="لوگو چپ"
+                            style={{width: '45px', borderRadius: "5px"}}/>
+                    </div>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav mx-auto">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">خانه</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="http://ble.ir/hosseyyn">ارتباط با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="logo-container">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuceGnKmmyF0V_77yQnFzgBLeB9kAsOO1p5E_AlYJGdpcdd7WOt2-K6hjG-LvyehqkhyA&usqp=CAU"
+                            alt="لوگو راست"
+                            style={{width: '45px', borderRadius: "5px"}}/>
                     </div>
                 </div>
-                {selectedImage && (<div className="full-screen-overlay" onClick={closeFullScreen}>
-                    <img src={selectedImage} alt="Full Screen" className="full-screen-image"/>
-                </div>)}
-            </Tab>
-            <Tab eventKey="memorise" title="خاطرات">
-                <div className="memories-section my-3">
-                    <ul>
-                        {person.memories.map((memory, index) => (<li key={index}>{memory}</li>))}
-                    </ul>
-                </div>
-            </Tab>
-        </Tabs>
+            </nav>
+            <div className="container pelak-info bg-night">
+                <div className="pelak-header">
+                    <div className="pelak-top my-3 gap-3">
+                        <img src={person.image} alt={person.name} className="main-image mb-3"/>
+                        <div className="old-block">
+                            <h1 className="text-white">{person.name}</h1>
+                            <p className="text-white">فرزند {person.fatherName}</p>
+                            <div className={"d-inline-block"}>
+                                <p className="old-fields biurth bg-success"><strong>تاریخ
+                                    تولد:</strong> {person.birthDate}
+                                </p>
+                                <p className="old-fields death bg-danger"><strong>تاریخ
+                                    شهادت:</strong> {person.martyrdomDate}</p>
+                            </div>
+                        </div>
+                    </div>
 
-    </div>);
+                    <div className="personal-info my-3">
+                        <p><strong>محل شهادت:</strong> {person.fatherName}</p>
+                        <p><strong>عملیات:</strong> {person.fatherName}</p>
+                        <p><strong>شغل:</strong> {person.fatherName}</p>
+                    </div>
+                </div>
+
+
+                <Tabs
+                    defaultActiveKey="profile"
+                    id="justify-tab-example"
+                    className="mt-1"
+                    activeKey={activeKey}
+                    onSelect={(k) => setActiveKey(k)}
+                    justify
+                >
+                    <Tab eventKey="will" title="وصیت‌نامه">
+                        <div className="tab-btn will-section my-3">
+                            <p>{person.will}</p>
+                        </div>
+                    </Tab>
+                    <Tab eventKey="picturse" title="تصاویر">
+                        <div className="tab-btn photo-gallery my-3">
+                            <div className="photo-scroller">
+                                {photos.map((photo, index) => (<img
+                                    key={index}
+                                    src={photo}
+                                    alt={`photo-${index}`}
+                                    className="gallery-photo"
+                                    onClick={() => showFullScreen(photo)}
+                                />))}
+                            </div>
+                        </div>
+                        {selectedImage && (<div className="full-screen-overlay" onClick={closeFullScreen}>
+                            <img src={selectedImage} alt="Full Screen" className="full-screen-image"/>
+                        </div>)}
+                    </Tab>
+                    <Tab eventKey="memorise" title="خاطرات">
+                        <div className="tab-btn memories-section my-3">
+                            <ul>
+                                {person.memories.map((memory, index) => (<li key={index}>{memory}</li>))}
+                            </ul>
+                        </div>
+                    </Tab>
+                </Tabs>
+
+            </div>
+        </div>
+    );
 }
 
 export default Pelak;

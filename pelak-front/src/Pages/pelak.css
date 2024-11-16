@@ -2,6 +2,12 @@
     padding: 50px;
 }
 
+.pelak-info {
+    background: url("../media/bg-pelak.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
 .pelak-header {
     display: block;
     align-items: center;
@@ -18,14 +24,27 @@
     padding: 20px;
 }
 
+.death, .biurth {
+    color: white;
+    opacity: 85%;
+}
+
+.biurth {
+    box-shadow: 0 0 8px green;
+}
+
+.death {
+    box-shadow: 0 0 8px red;
+}
+
 .personal-info p {
     display: inline-block;
     border: 1px solid #ccc; /* اضافه کردن حاشیه */
     padding: 10px; /* فضای داخلی */
     border-radius: 5px; /* گرد کردن گوشه‌ها */
     margin: 10px; /* فاصله بین عناصر */
-    background-color: #f9f9f9; /* رنگ پس‌زمینه */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه */
+    background-color: white; /* رنگ پس‌زمینه */
+    box-shadow: 0 0 8px rgb(255, 0, 0); /* سایه */
 }
 
 .martyr-details-container {
@@ -38,6 +57,7 @@
     object-fit: cover;
     border-radius: 10px; /* گوشه‌های کمتر گرد مشابه کارت‌ها */
     border: 2px solid #444; /* حاشیه برای هماهنگی با قالب */
+    box-shadow: 0 0 120px red;
 }
 
 .personal-info {
@@ -55,10 +75,11 @@
     max-height: 400px; /* ارتفاع حداکثر */
     overflow-y: auto; /* افزودن اسکرول در صورت بیشتر بودن محتوا */
     background: #f9f9f9;
-    opacity: 80%;
+    opacity: 90%;
 }
 
 .photo-gallery {
+    background: white;
     overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
@@ -106,4 +127,9 @@
 
 .fields {
     margin-top: 50px;
+}
+
+.nav-link {
+    --bs-nav-link-hover-color: #ffbdbd;
+    --bs-nav-link-color: white;
 }
